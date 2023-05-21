@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "mobile-weather-app",
+    "slug": "mobile-weather-app"
+  }
+}
