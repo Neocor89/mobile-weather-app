@@ -2,6 +2,8 @@ import axios from "axios";
 import { apiKey } from "../constants";
 
 //+ RESTART HERE
+//TODO
+//: STYLE AND API CALL
 
 const forecastEndpoint = (params) =>
   `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${params.cities}`;
