@@ -1,51 +1,20 @@
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, TouchableOpacity, Text } from "react-native";
 import React, { useState } from "react";
 import styled from "styled-components/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import {
+  SafeAreaViewStyled,
+  TextInputStyled,
+  TouchableOpacityLocStyled,
+  TouchableOpacityStyled,
+  ViewInStyled,
+  ViewLocation,
+  ViewStyled,
+} from "../theme";
 
-const SafeAreaViewStyled = styled.SafeAreaView`
-  display: flex;
-  flex: 1;
-`;
-
-const ViewStyled = styled.View`
-  height: 7%;
-  margin-left: 15px;
-  margin-right: 15px;
-  position: relative;
-  z-index: 20;
-`;
-
-const ViewInStyled = styled.View`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 100px;
-  background-color: #ffffff;
-  opacity: 0.2;
-  transition: background-color 1s ease-in-out;
-`;
-
-const TextInputStyled = styled.TextInput`
-  padding-left: 18px;
-  height: 20px;
-  flex: 1;
-  color: #ffffff;
-`;
-
-const TouchableOpacityStyled = styled.TouchableOpacity`
-  background-color: #ffffff;
-  border-radius: 100px;
-  padding: 12px;
-  margin: 4px;
-`;
-
-const ViewLocation = styled.View`
-  position: absolute;
-  background-color: rgb(209 213 219);
-  top: 64px;
-`;
+// TODO
+//+ RESTART WITH DISPLAY LOCATIONS
+//+ CHANGING ALL CSS IN ANOTHER FILE
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
@@ -74,8 +43,23 @@ export default function Home() {
               <Ionicons name="search-outline" size={25} color="black" />
             </TouchableOpacityStyled>
           </ViewInStyled>
+
           {locations.length > 0 && showSearch ? (
-            <ViewLocation></ViewLocation>
+            <ViewLocation>
+              {locations.map((loc, index) => {
+                let borderLocation = index + 1 != locations.length;
+                //+ TODO --> continuing border style
+                // let borderClass = showBorder ? border1 : border2;
+                return (
+                  <TouchableOpacityLocStyled key={index}>
+                    <Ionicons name="location-outline" />
+                    <Text style={{ marginBottom: 7 }}>
+                      Paris, Barcelona, Miami
+                    </Text>
+                  </TouchableOpacityLocStyled>
+                );
+              })}
+            </ViewLocation>
           ) : null}
         </ViewStyled>
       </SafeAreaViewStyled>
