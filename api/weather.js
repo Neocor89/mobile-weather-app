@@ -3,7 +3,7 @@ import { apiKey } from "../constants";
 
 //+ RESTART HERE
 //TODO
-//: STYLE AND API CALL
+//: TESTING CALL PARAMS WORK FOR API
 
 const forecastEndpoint = (params) =>
   `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${params.cities}`;
