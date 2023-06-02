@@ -1,6 +1,5 @@
 import { StyleSheet, Image, TouchableOpacity, Text } from "react-native";
 import React, { useState } from "react";
-import styled from "styled-components/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   SafeAreaViewStyled,
@@ -13,8 +12,7 @@ import {
 } from "../theme";
 
 // TODO
-//+ RESTART WITH DISPLAY LOCATIONS
-//+ CHANGING ALL CSS IN ANOTHER FILE
+//+ CONTINUING LOCATIONS DISPLAY
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
@@ -52,7 +50,11 @@ export default function Home() {
                 // let borderClass = showBorder ? border1 : border2;
                 return (
                   <TouchableOpacityLocStyled key={index}>
-                    <Ionicons name="location-outline" />
+                    <Ionicons
+                      name="location-outline"
+                      size={25}
+                      style={{ paddingRight: 5, paddingBottom: 5 }}
+                    />
                     <Text style={{ marginBottom: 7 }}>
                       Paris, Barcelona, Miami
                     </Text>
