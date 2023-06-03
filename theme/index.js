@@ -38,17 +38,10 @@ export const TouchableOpacityStyled = styled.TouchableOpacity`
   margin: 4px;
 `;
 
-export const TouchableOpacityLocStyled = styled.TouchableOpacity`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 5px;
-  margin-bottom: 15px;
+export const NewTouchableOpacityLoc = styled.TouchableOpacity`
   border-bottom-width: 2px;
   border-bottom-color: #aaaeb4;
+  margin-bottom: 0px;
 `;
 
 export const ViewLocation = styled.View`
@@ -57,4 +50,37 @@ export const ViewLocation = styled.View`
   top: 64px;
   width: 100%;
   border-radius: 19px;
+`;
+
+export const TextCities = styled.Text`
+  color: #202125;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 7px;
+  margin-top: 8px;
+`;
+
+export const ViewForecast = styled.View`
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  margin-bottom: 4px;
+`;
+
+export const TextForecast = styled.Text`
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 7px;
+  margin-top: 8px;
+  font-size: 24px;
+  line-height: 32px;
+`;
+export const TextCountry = styled.Text`
+  color: rgb(209 213 219);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
 `;
