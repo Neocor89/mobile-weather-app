@@ -12,3 +12,11 @@ npx create-expo-app -e with-router
 
 - [Expo Router: Docs](https://expo.github.io/router)
 - [Expo Router: Repo](https://github.com/expo/router)
+
+---
+
+<div style="margin-bottom: 35px;"></div>
+
+## **PROVISIONAL APPLICATION RENDERING**
+
+<img src="assets/images/readme-app-render.jpg" alt="weather app rendering" style="max-width: 280px; margin-top: 25px;"/>
