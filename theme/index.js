@@ -78,9 +78,68 @@ export const TextForecast = styled.Text`
   font-size: 24px;
   line-height: 32px;
 `;
+
 export const TextCountry = styled.Text`
   color: rgb(209 213 219);
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
+`;
+
+export const ViewForecastImage = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const ImageForecast = styled.Image`
+  width: 230px;
+  height: 208px;
+`;
+
+export const ViewDegreeContainer = styled.View`
+  margin-left: 8px;
+`;
+
+export const TextDegree = styled.Text`
+  color: white;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 60px;
+`;
+
+export const TextWeather = styled.Text`
+  color: rgb(255 255 255);
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-right: 10px;
+`;
+
+export const ViewStatsContainer = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const ViewStatsContent = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ImageStatsWind = styled.Image`
+  width: 29px;
+  height: 29px;
+`;
+
+export const TextWind = styled.Text`
+  color: rgb(255 255 255);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
 `;
