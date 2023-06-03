@@ -2,21 +2,32 @@ import { StyleSheet, Image, TouchableOpacity, Text } from "react-native";
 import React, { useState } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
+  NewTouchableOpacityLoc,
   SafeAreaViewStyled,
+  TextCities,
+  TextCountry,
+  TextForecast,
   TextInputStyled,
   TouchableOpacityLocStyled,
   TouchableOpacityStyled,
+  ViewForecast,
   ViewInStyled,
   ViewLocation,
   ViewStyled,
 } from "../theme";
 
 // TODO
+
 //+ CONTINUING LOCATIONS DISPLAY
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
   const [locations, setLocations] = useState([1, 2, 3]);
+
+  const handleLocation = (loc) => {
+    console.log("Location is : ", loc);
+  };
+
   return (
     <>
       <Image
@@ -45,25 +56,45 @@ export default function Home() {
           {locations.length > 0 && showSearch ? (
             <ViewLocation>
               {locations.map((loc, index) => {
-                let borderLocation = index + 1 != locations.length;
-                //+ TODO --> continuing border style
-                // let borderClass = showBorder ? border1 : border2;
+                let showBorder = index + 3 != locations.length;
+                let borderClass = showBorder ? NewTouchableOpacityLoc : "";
                 return (
-                  <TouchableOpacityLocStyled key={index}>
+                  <TouchableOpacity
+                    onPress={() => handleLocation(loc)}
+                    key={index}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      margin: 4,
+                      paddingLeft: 16,
+                      paddingRight: 16,
+                      paddingTop: 5,
+                      marginBottom: 10,
+                      borderBottomWidth: 1,
+                      borderBottomColor: "#aaaeb4" + borderClass,
+                    }}
+                  >
                     <Ionicons
                       name="location-outline"
                       size={25}
-                      style={{ paddingRight: 5, paddingBottom: 5 }}
+                      style={{ paddingRight: 5 }}
+                      color={"gray"}
                     />
-                    <Text style={{ marginBottom: 7 }}>
-                      Paris, Barcelona, Miami
-                    </Text>
-                  </TouchableOpacityLocStyled>
+                    <TextCities>Bogota Colombia</TextCities>
+                  </TouchableOpacity>
                 );
               })}
             </ViewLocation>
           ) : null}
         </ViewStyled>
+        {/* FORECAST SECTION */}
+        <ViewForecast>
+          <TextForecast>
+            Bogota,
+            <TextCountry>Colombia</TextCountry>
+          </TextForecast>
+        </ViewForecast>
       </SafeAreaViewStyled>
     </>
   );
