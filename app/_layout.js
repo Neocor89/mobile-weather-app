@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
-export default function Layout({ children }) {
+export default function _layout({ children }) {
   return (
     <>
       <Stack
