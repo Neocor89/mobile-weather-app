@@ -1,4 +1,10 @@
-import { StyleSheet, Image, TouchableOpacity, Text } from "react-native";
+import {
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Text,
+  ScrollView,
+} from "react-native";
 import React, { useState } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
@@ -15,6 +21,8 @@ import {
   TextWind,
   TouchableOpacityLocStyled,
   TouchableOpacityStyled,
+  ViewCalendarContainer,
+  ViewCalendarContent,
   ViewDegreeContainer,
   ViewForecast,
   ViewForecastImage,
@@ -23,11 +31,10 @@ import {
   ViewStatsContainer,
   ViewStatsContent,
   ViewStyled,
+  ViewWeekContainer,
 } from "../theme";
 
 // TODO
-
-//+ CONTINUING LOCATIONS TEMPERATURES ICONS STYLING
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
@@ -121,26 +128,39 @@ export default function Home() {
           <ViewStatsContainer>
             <ViewStatsContent>
               <ImageStatsWind
-                source={require("../assets/images/wind-info.png")}
+                source={require("../assets/images/wind-stats.png")}
               ></ImageStatsWind>
               <TextWind>28km</TextWind>
             </ViewStatsContent>
 
             <ViewStatsContent>
               <ImageStatsWind
-                source={require("../assets/images/wind-info.png")}
+                source={require("../assets/images/drop-stats.png")}
               ></ImageStatsWind>
-              <TextWind>28km</TextWind>
+              <TextWind>23%</TextWind>
             </ViewStatsContent>
 
             <ViewStatsContent>
               <ImageStatsWind
-                source={require("../assets/images/wind-info.png")}
+                source={require("../assets/images/sun-stats.png")}
               ></ImageStatsWind>
-              <TextWind>28km</TextWind>
+              <TextWind>8:20 AM</TextWind>
             </ViewStatsContent>
           </ViewStatsContainer>
         </ViewForecast>
+
+        {/* FORECAST WEEK SECTION */}
+        <ViewWeekContainer>
+          <ViewCalendarContainer>
+            <Ionicons name="calendar-outline" color={"#cbcbcb"} size={24} />
+          </ViewCalendarContainer>
+        </ViewWeekContainer>
+
+        {/* TODO 
+        ADDING IMAGE SUNNY RAIN 
+        <ScrollView>
+          <ViewCalendarContent></ViewCalendarContent>
+        </ScrollView> */}
       </SafeAreaViewStyled>
     </>
   );
