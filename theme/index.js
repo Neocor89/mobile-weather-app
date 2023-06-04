@@ -118,6 +118,8 @@ export const TextWeather = styled.Text`
   margin-right: 10px;
 `;
 
+//? FORECAST WEEK SECTION
+
 export const ViewStatsContainer = styled.View`
   display: flex;
   flex-direction: row;
@@ -142,4 +144,30 @@ export const TextWind = styled.Text`
   line-height: 24px;
   font-weight: 600;
   letter-spacing: 0.8px;
+`;
+
+export const ViewWeekContainer = styled.View`
+  margin-top: 12px;
+  margin-bottom: 12px;
+`;
+
+export const ViewCalendarContainer = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+`;
+
+export const ViewCalendarContent = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  border-radius: 24px;
+  margin-right: 16px;
+  margin-left: 4px;
+  background-color: rgba(255, 255, 255);
+  opacity: 0.2;
 `;
