@@ -36,9 +36,11 @@ import {
 
 // TODO
 
+//+ CONTINUING FORECAST WEEK DISPLAYING WITH IMAGES
+
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
-  const [locations, setLocations] = useState([1, 2, 3]);
+  // const [locations, setLocations] = useState([1, 2, 3]);
 
   const handleLocation = (loc) => {
     console.log("Location is : ", loc);
