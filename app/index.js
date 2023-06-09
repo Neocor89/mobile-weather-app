@@ -12,6 +12,7 @@ import {
   ImageStatsWind,
   NewTouchableOpacityLoc,
   SafeAreaViewStyled,
+  TextCalendar,
   TextCities,
   TextCountry,
   TextDegree,
@@ -40,7 +41,7 @@ import {
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
-  // const [locations, setLocations] = useState([1, 2, 3]);
+  const [locations, setLocations] = useState([1, 2, 3]);
 
   const handleLocation = (loc) => {
     console.log("Location is : ", loc);
@@ -155,14 +156,13 @@ export default function Home() {
         <ViewWeekContainer>
           <ViewCalendarContainer>
             <Ionicons name="calendar-outline" color={"#cbcbcb"} size={24} />
+            <TextCalendar>Daily Forecast</TextCalendar>
           </ViewCalendarContainer>
         </ViewWeekContainer>
 
-        {/* TODO 
-        ADDING IMAGE SUNNY RAIN 
         <ScrollView>
           <ViewCalendarContent></ViewCalendarContent>
-        </ScrollView> */}
+        </ScrollView>
       </SafeAreaViewStyled>
     </>
   );
