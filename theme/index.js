@@ -66,7 +66,8 @@ export const ViewForecast = styled.View`
   display: flex;
   flex: 1;
   justify-content: space-around;
-  margin-bottom: 4px;
+  margin-bottom: 30px;
+  margin-top: 40px;
 `;
 
 export const TextForecast = styled.Text`
@@ -95,10 +96,14 @@ export const ViewForecastImage = styled.View`
 export const ImageForecast = styled.Image`
   width: 230px;
   height: 208px;
+  margin-top: 80px;
+  margin-bottom: 45px;
 `;
 
 export const ViewDegreeContainer = styled.View`
   margin-left: 8px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 `;
 
 export const TextDegree = styled.Text`
@@ -116,6 +121,8 @@ export const TextWeather = styled.Text`
   line-height: 28px;
   letter-spacing: 1px;
   margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 `;
 
 //? FORECAST WEEK SECTION
@@ -124,6 +131,8 @@ export const ViewStatsContainer = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 export const ViewStatsContent = styled.View`
@@ -131,6 +140,7 @@ export const ViewStatsContent = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 `;
 
 export const ImageStatsWind = styled.Image`
@@ -170,4 +180,9 @@ export const ViewCalendarContent = styled.View`
   margin-left: 4px;
   background-color: rgba(255, 255, 255);
   opacity: 0.2;
+`;
+
+export const TextCalendar = styled.Text`
+  color: rgb(255 255 255);
+  margin-left: 16px;
 `;
