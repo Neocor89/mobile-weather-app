@@ -2,7 +2,6 @@ import axios from "axios";
 import { apiKey } from "../constants";
 
 //+ RESTART HERE
-//TODO
 //: TESTING CALL PARAMS WORK FOR API
 
 const forecastEndpoint = (params) =>
