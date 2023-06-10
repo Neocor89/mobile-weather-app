@@ -11,6 +11,7 @@ export const ViewStyled = styled.View`
   margin-right: 15px;
   position: relative;
   z-index: 20;
+  margin-bottom: 20px;
 `;
 
 export const ViewInStyled = styled.View`
@@ -63,18 +64,13 @@ export const TextCities = styled.Text`
 export const ViewForecast = styled.View`
   margin-left: 16px;
   margin-right: 16px;
-  display: flex;
-  flex: 1;
   justify-content: space-around;
-  margin-bottom: 30px;
-  margin-top: 40px;
 `;
 
 export const TextForecast = styled.Text`
   color: white;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 7px;
   margin-top: 8px;
   font-size: 24px;
   line-height: 32px;
@@ -96,14 +92,10 @@ export const ViewForecastImage = styled.View`
 export const ImageForecast = styled.Image`
   width: 230px;
   height: 208px;
-  margin-top: 80px;
-  margin-bottom: 45px;
 `;
 
 export const ViewDegreeContainer = styled.View`
   margin-left: 8px;
-  padding-top: 40px;
-  padding-bottom: 20px;
 `;
 
 export const TextDegree = styled.Text`
@@ -121,22 +113,20 @@ export const TextWeather = styled.Text`
   line-height: 28px;
   letter-spacing: 1px;
   margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 40px;
 `;
 
 //? FORECAST WEEK SECTION
 
 export const ViewStatsContainer = styled.View`
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 `;
 
 export const ViewStatsContent = styled.View`
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -157,8 +147,8 @@ export const TextWind = styled.Text`
 `;
 
 export const ViewWeekContainer = styled.View`
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 22px;
+  /* margin-bottom: 12px; */
 `;
 
 export const ViewCalendarContainer = styled.View`
@@ -170,19 +160,33 @@ export const ViewCalendarContainer = styled.View`
   margin-right: 20px;
 `;
 
-export const ViewCalendarContent = styled.View`
+export const ViewForecastWeek = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 96px;
   border-radius: 24px;
   margin-right: 16px;
-  margin-left: 4px;
-  background-color: rgba(255, 255, 255);
-  opacity: 0.2;
+  margin-top: 26px;
+  margin-left: 20px;
+  background-color: hsl(0, 0%, 62.2%);
+  height: 96px;
+  opacity: 0.8;
 `;
 
 export const TextCalendar = styled.Text`
   color: rgb(255 255 255);
   margin-left: 16px;
+`;
+
+export const ImageForecastWeek = styled.Image`
+  width: 48px;
+  height: 48px;
+`;
+
+export const TextForecastWind = styled.Text`
+  color: rgb(255 255 255);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
 `;
