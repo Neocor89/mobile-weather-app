@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   ImageForecast,
+  ImageForecastWeek,
   ImageStatsWind,
   NewTouchableOpacityLoc,
   SafeAreaViewStyled,
@@ -17,13 +18,14 @@ import {
   TextCountry,
   TextDegree,
   TextForecast,
+  TextForecastWind,
   TextInputStyled,
   TextWeather,
   TextWind,
   TouchableOpacityLocStyled,
   TouchableOpacityStyled,
   ViewCalendarContainer,
-  ViewCalendarContent,
+  ViewForecastWeek,
   ViewDegreeContainer,
   ViewForecast,
   ViewForecastImage,
@@ -107,7 +109,7 @@ export default function Home() {
             </ViewLocation>
           ) : null}
         </ViewStyled>
-        {/* FORECAST SECTION */}
+        {/* MAINFORECAST SECTION */}
         <ViewForecast>
           <TextForecast>
             Bogota,
@@ -160,8 +162,48 @@ export default function Home() {
           </ViewCalendarContainer>
         </ViewWeekContainer>
 
-        <ScrollView>
-          <ViewCalendarContent></ViewCalendarContent>
+        <ScrollView
+          horizontal
+          contentContainerStyle={{ paddingHorizontal: 0 }}
+          showsHorizontalScrollIndicator={false}
+        >
+          {/*
+          ADDING NEW CONTENT FORECAST SECTION */}
+          <ViewForecastWeek>
+            <ImageForecastWeek
+              source={require("../assets/images/sunny-rain.png")}
+            ></ImageForecastWeek>
+            <Text style={{ color: "white" }}>Monday</Text>
+            <TextForecastWind>15&#176;</TextForecastWind>
+          </ViewForecastWeek>
+          <ViewForecastWeek>
+            <ImageForecastWeek
+              source={require("../assets/images/sunny-rain.png")}
+            ></ImageForecastWeek>
+            <Text style={{ color: "white" }}>Tuesday</Text>
+            <TextForecastWind>12&#176;</TextForecastWind>
+          </ViewForecastWeek>
+          <ViewForecastWeek>
+            <ImageForecastWeek
+              source={require("../assets/images/sunny-rain.png")}
+            ></ImageForecastWeek>
+            <Text style={{ color: "white" }}>Wednesday</Text>
+            <TextForecastWind>14&#176;</TextForecastWind>
+          </ViewForecastWeek>
+          <ViewForecastWeek>
+            <ImageForecastWeek
+              source={require("../assets/images/sunny-rain.png")}
+            ></ImageForecastWeek>
+            <Text style={{ color: "white" }}>Thursday</Text>
+            <TextForecastWind>11&#176;</TextForecastWind>
+          </ViewForecastWeek>
+          <ViewForecastWeek>
+            <ImageForecastWeek
+              source={require("../assets/images/sunny-rain.png")}
+            ></ImageForecastWeek>
+            <Text style={{ color: "white" }}>Friday</Text>
+            <TextForecastWind>18&#176;</TextForecastWind>
+          </ViewForecastWeek>
         </ScrollView>
       </SafeAreaViewStyled>
     </>
