@@ -19,4 +19,4 @@ npx create-expo-app -e with-router
 
 ## **PROVISIONAL APPLICATION RENDERING**
 
-<img src="assets/images/readme-app-render.jpg" alt="weather app rendering" style="max-width: 280px; margin-top: 25px;"/>
+<img src="assets/images/readme-render-weather-app.jpg" alt="weather app rendering" style="max-width: 280px; margin-top: 25px;"/>
