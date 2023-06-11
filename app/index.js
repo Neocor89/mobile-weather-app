@@ -5,7 +5,7 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {
   ImageForecast,
@@ -22,7 +22,6 @@ import {
   TextInputStyled,
   TextWeather,
   TextWind,
-  TouchableOpacityLocStyled,
   TouchableOpacityStyled,
   ViewCalendarContainer,
   ViewForecastWeek,
@@ -37,6 +36,9 @@ import {
   ViewWeekContainer,
 } from "../theme";
 
+import { debounce } from "lodash";
+import { fetchLocations } from "../api/weather";
+
 // TODO
 
 //+ CONTINUING FORECAST WEEK DISPLAYING WITH IMAGES
@@ -48,6 +50,18 @@ export default function Home() {
   const handleLocation = (loc) => {
     console.log("Location is : ", loc);
   };
+
+  const handleSearch = (value) => {
+    if (value.length > 2) {
+      fetchLocations({
+        cities: value,
+      }).then((data) => {
+        setLocations(data);
+      });
+    }
+  };
+
+  const handleDebounce = useCallback(debounce(handleSearch, 1200), []);
 
   return (
     <>
@@ -64,6 +78,7 @@ export default function Home() {
           >
             {showSearch ? (
               <TextInputStyled
+                onChangeText={handleDebounce}
                 placeholder="Search City"
                 placeholderTextColor={"black"}
               ></TextInputStyled>
@@ -102,7 +117,9 @@ export default function Home() {
                       style={{ paddingRight: 5 }}
                       color={"gray"}
                     />
-                    <TextCities>Bogota Colombia</TextCities>
+                    <TextCities>
+                      {loc?.LocalizedName} {loc?.Country}
+                    </TextCities>
                   </TouchableOpacity>
                 );
               })}
@@ -116,7 +133,7 @@ export default function Home() {
             <TextCountry>Colombia</TextCountry>
           </TextForecast>
 
-          {/* WEATHER IMAGE SECTION */}
+          {/* WEATHER IMAGE SECTION  */}
           <ViewForecastImage>
             <ImageForecast
               source={require("../assets/images/3D-lighting-cloud.png")}
