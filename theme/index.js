@@ -21,7 +21,7 @@ export const ViewInStyled = styled.View`
   align-items: center;
   border-radius: 100px;
   background-color: #ffffff;
-  opacity: 0.2;
+  opacity: 0.4;
   transition: background-color 1s ease-in-out;
 `;
 
@@ -29,7 +29,7 @@ export const TextInputStyled = styled.TextInput`
   padding-left: 18px;
   height: 20px;
   flex: 1;
-  color: #ffffff;
+  color: black;
 `;
 
 export const TouchableOpacityStyled = styled.TouchableOpacity`
@@ -54,8 +54,9 @@ export const ViewLocation = styled.View`
 `;
 
 export const TextCities = styled.Text`
-  color: #202125;
-  font-size: 18px;
+  color: #272822;
+  font-weight: bold;
+  font-size: 88px;
   line-height: 28px;
   margin-bottom: 7px;
   margin-top: 8px;
@@ -101,7 +102,6 @@ export const ViewDegreeContainer = styled.View`
 export const TextDegree = styled.Text`
   color: white;
   text-align: center;
-
   font-weight: bold;
   font-size: 60px;
 `;
@@ -128,7 +128,7 @@ export const ViewStatsContent = styled.View`
   display: flex;
   flex: 1;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   margin-top: 40px;
 `;
