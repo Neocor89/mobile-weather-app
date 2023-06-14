@@ -37,11 +37,7 @@ import {
 } from "../theme";
 
 import { debounce } from "lodash";
-import { fetchLocations } from "../api/weather";
-
-// TODO
-
-//+ CONTINUING FORECAST WEEK DISPLAYING WITH IMAGES
+import { fetchLocations, fetchWeatherForecast } from "../api/weather";
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
@@ -49,12 +45,19 @@ export default function Home() {
 
   const handleLocation = (loc) => {
     console.log("Location is : ", loc);
+    setLocations([]);
+    fetchWeatherForecast({
+      cityName: loc.name,
+      days: "7",
+    }).then((data) => {
+      console.log("Get data: ", data);
+    });
   };
 
   const handleSearch = (value) => {
     if (value.length > 2) {
       fetchLocations({
-        cities: value,
+        cityName: value,
       }).then((data) => {
         setLocations(data);
       });
@@ -118,7 +121,7 @@ export default function Home() {
                       color={"gray"}
                     />
                     <TextCities>
-                      {loc?.LocalizedName} {loc?.Country}
+                      {loc?.name} {loc?.country}
                     </TextCities>
                   </TouchableOpacity>
                 );
