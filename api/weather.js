@@ -1,15 +1,15 @@
 import axios from "axios";
 
-//+ RESTART HERE
 // TODO
 //: CREATE ENV FILE AND FIND PROCESS FOR APIKEY
-//! PROBLEM WITH NEW API FOR GRAB DATA / CHECK
+//! PROBLEM WITH NEW API FOR GRAB DATA
+//! CORRECT OR BACK WTIH OLD API
 
 const apiKey = "";
 
 const forecastEndpoint = (params) =>
   //: NEW API
-  `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${params.cityName}&days=${params.days}&aqi=no&alerts=no`;
+  `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${params.cityName}&days=${params.days}&aqi=no&alerts=no`;
 
 // https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${params.cities}&aqi=no
 
@@ -17,7 +17,7 @@ const forecastEndpoint = (params) =>
 // BEFORE `http://dataservice.accuweather.com/forecasts/v1/daily/${params.days}day/${params.cities}`
 
 const locationsEndpoint = (params) =>
-  `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${params.cityName}&aqi=no`;
+  `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${params.cityName}&aqi=no`;
 
 // http://dataservice.accuweather.com/locations/v1/${params.cities}/search
 
