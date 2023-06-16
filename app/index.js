@@ -39,6 +39,9 @@ import {
 import { debounce } from "lodash";
 import { fetchLocations, fetchWeatherForecast } from "../api/weather";
 
+// TODO
+//: fix the bug with the API calling
+
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
   const [locations, setLocations] = useState([1, 2, 3]);
