@@ -41,6 +41,7 @@ import { fetchLocations, fetchWeatherForecast } from "../api/weather";
 
 // TODO
 //: fix the bug with the API calling
+//: FOUND NEW IDEAS FOR STYLES COMPONENTS IMPORTS
 
 export default function Home() {
   const [showSearch, setShowSearch] = useState(false);
